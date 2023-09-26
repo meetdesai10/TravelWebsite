@@ -1,0 +1,1390 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+header {
+  background-color: white;
+  margin-top: 50px;
+  position: fixed;
+  width: 100%;
+  z-index: 9999;
+}
+a {
+  text-decoration: none;
+  color: black;
+}
+ul {
+  list-style: none;
+}
+header .margin {
+  margin: 0px 170px;
+}
+header .h-padding {
+  padding: 25px 0px;
+}
+header .nav {
+  display: flex;
+  flex: 1;
+  align-items: center;
+}
+header .nav .navigation ul {
+  display: flex;
+  justify-content: left;
+  gap: 40px;
+}
+header .nav .navigation ul li a {
+  color: grey;
+  font-size: 17px;
+}
+/*====amimation on navigation bar=======*/
+header .nav .navigation ul li a:hover {
+  color: rgb(232, 101, 123);
+}
+header .nav .navigation ul li a::after {
+  content: "";
+  height: 3px;
+  background-color: rgb(232, 101, 123);
+  transform: scaleX(0);
+  transform-origin: 0% 100%;
+  display: block;
+  transition: 0.4s all ease-in-out;
+}
+header .nav .navigation ul li a:hover::after {
+  transform: scaleX(1);
+}
+header .nav .headname {
+  flex: 0.6;
+  font-size: 35px;
+  font-weight: 600;
+}
+header .nav .navigation {
+  flex: 2;
+}
+/*====drop down list on navigation bar=======*/
+header .nav .navigation .showlist .droplist {
+  display: none;
+  position: relative;
+}
+header .nav .navigation .showlist .droplist li {
+  padding: 3px;
+}
+header .nav .navigation .showlist .droplist li {
+  transition: 0.5s all ease-in-out;
+}
+header .nav .navigation .showlist .droplist li:hover {
+  transform: translateX(9px);
+}
+header .nav .navigation .showlist:hover .droplist {
+  display: block;
+  position: absolute;
+  top: 79px;
+  left: 634px;
+  padding: 10px;
+  width: 12%;
+  border: 0.5px solid grey;
+  border-radius: 5px;
+  background-color: white;
+}
+header .nav .navigation .showlist .droplist .arrow {
+  position: absolute;
+  height: 25px;
+  width: 25px;
+  top: -12.5px;
+  left: 75px;
+  transform: rotate(45deg);
+  background-color: white;
+  border-top: 0.5px solid grey;
+  border-left: 0.5px solid grey;
+  border-radius: 2px;
+}
+
+/*======= set buttonm in header==========*/
+header .nav .buttons {
+  flex: 1;
+  display: flex;
+  gap: 40px;
+  justify-content: end;
+  align-items: center;
+}
+header .nav .buttons a .touch {
+  height: 50px;
+  width: 160px;
+  border: 1px solid transparent;
+  border-radius: 7px;
+  background-color: #ff1654;
+  transition: 0.5s all ease-in-out;
+  color: white;
+  display: grid;
+  align-items: center;
+  place-content: center;
+  font-size: 17px;
+}
+header .nav .buttons a .touch:hover {
+  box-shadow: 0px 0px 0px 3px #ec698c;
+}
+header .nav .buttons .fa-moon {
+  font-size: 27px;
+  color: grey;
+}
+/*=======menu bar button for media query========*/
+header .nav .buttons .fa-bars {
+  font-size: 25px;
+  display: none;
+}
+/*============ section-1==========*/
+.section1 {
+  overflow: hidden;
+}
+.section1 .background-img {
+  position: relative;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 650px;
+  filter: brightness(70%);
+  animation-name: animation-image;
+  animation-duration: 3s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+/*===animation on image===*/
+@keyframes animation-image {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(1.1);
+  }
+}
+/* ==== set text on image===*/
+.heading-box {
+  height: auto;
+  width: 45%;
+  /* border: 1px solid black; */
+  position: absolute;
+  margin: 0px 170px;
+  top: 200px;
+}
+.heading-box .main-heading {
+  font-size: 50px;
+  color: white;
+  font-weight: 600;
+}
+.heading-box .mini-heading {
+  font-size: 17.5px;
+  color: white;
+  margin: 22px 0px;
+}
+.section1 .heading-box .buttons {
+  display: flex;
+  gap: 30px;
+}
+.section1 .heading-box .buttons .drop-list select {
+  height: 50px;
+  width: 185px;
+  border-radius: 7px;
+  color: grey;
+  font-size: 17px;
+  padding: 0px 10px;
+}
+.section1 .heading-box .buttons .date-brith input {
+  height: 50px;
+  width: 185px;
+  border: 1px solid transparent;
+  border-radius: 7px;
+  color: grey;
+  font-size: 17px;
+  padding: 0px 10px;
+}
+.section1 .heading-box .buttons .search-button a {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+  height: 50px;
+  width: 150px;
+  border-radius: 7px;
+  color: white;
+  font-size: 17px;
+  border: 1px solid transparent;
+  background-color: #ff1654;
+  transition: 0.5s all ease-in-out;
+}
+.section1 .heading-box .buttons .search-button a:hover {
+  box-shadow: 0px 0px 0px 5px #e34b74;
+}
+/*=======section2=========*/
+.section2 {
+  background-color: whitesmoke;
+}
+.section2 .section2-margin {
+  margin: 0px 170px;
+}
+.section2 .section2-padding {
+  padding-top: 85px;
+  padding-bottom: 35px;
+}
+.section2 .h-1 {
+  font-size: 18px;
+  color: #ff1654;
+  font-weight: 500;
+  margin-bottom: 10px;
+}
+.section2 .h-2 {
+  font-size: 40px;
+  font-weight: 600;
+}
+/*=========section3========*/
+.section3 {
+  background-color: whitesmoke;
+}
+.section3 .grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 25px;
+}
+.section3 .grid .mini-box {
+  border: 0.5px solid rgb(228, 219, 219);
+  border-radius: 10px;
+  background-color: white;
+}
+.section3 .grid .mini-box .image-content {
+  display: flex;
+  gap: 30px;
+  align-items: center;
+}
+.section3 .section3-margin {
+  margin: 0px 170px;
+}
+.section3 .section3-padding {
+  padding-bottom: 80px;
+}
+.section3 .grid .mini-box .image img {
+  height: 50%;
+  width: 100%;
+  border-radius: 7px;
+}
+.section3 .grid .mini-box .minibox-padding {
+  margin: 20px;
+}
+.section3 .grid .mini-box .image-content .content h4 {
+  font-size: 27px;
+  font-weight: 500;
+}
+.section3 .grid .mini-box .image-content .content p {
+  color: grey;
+  margin-bottom: 10px;
+}
+.section3 .grid .mini-box .image-content .content .line-1 {
+  height: 0.5px;
+  width: 310px;
+  margin-bottom: 4px;
+  background-color: rgb(228, 219, 219);
+}
+.section3 .grid .mini-box .image-content .content .line-2 {
+  height: 0.5px;
+  width: 310px;
+  margin-top: 4px;
+  background-color: rgb(228, 219, 219);
+}
+.section3 .grid .mini-box .image-content .content .price .text {
+  display: flex;
+  gap: 190px;
+}
+.section3 .grid .mini-box .image-content .content .price .text .text-2 {
+  color: #ff1654;
+  font-weight: 500;
+}
+.section3 .grid .mini-box .image-content .content .end-text p {
+  margin-top: 10px;
+}
+/*==========section 4=============*/
+.section4 .section4-margin {
+  margin: 0px 170px;
+}
+.section4 .section4-padding {
+  padding: 30px 0px;
+}
+.section4 .ranking-box {
+  display: flex;
+  gap: 200px;
+}
+.section4 .ranking-box .r-box1 .digit {
+  font-size: 50px;
+  font-weight: 600;
+  color: #ff1654;
+}
+.section4 .ranking-box .r-box1 p {
+  font-size: 18px;
+  color: grey;
+  font-weight: 400;
+}
+/*======== section 5========*/
+
+.section5 {
+  background-color: whitesmoke;
+}
+.section5 .section5-margin {
+  margin: 0px 170px;
+}
+.section5 .section5-padding {
+  padding: 90px 0px;
+}
+.section5 .packages {
+  display: flex;
+  gap: 30px;
+}
+.section5 .packages .imagesection-1 .big-image {
+  height: 96%;
+  width: 100%;
+  border-radius: 10px;
+  filter: brightness(70%);
+  transition: 0.4s all ease-in-out;
+}
+.section5 .packages .imagesection-1 .big-image:hover {
+  transform: translateY(-5px);
+  filter: brightness(100%);
+}
+.section5 .packages .imagesection-1{
+  position: relative;
+  flex: 1;
+}
+.section5 .packages .imagesection-1 .minisection{
+    position: relative;
+}
+.section5 .packages .imagesection-1 .minisection .overlay{
+    position: absolute;
+    bottom: 50px;
+    left: 30px;
+    font-size: 20px;
+    color: rgb(221, 214, 214);
+}
+.section5 .packages .imagesection-1 .minisection .overlay .upper-text{
+    position: absolute;
+    top: 7px;
+    transition: .5s all ease-in-out;
+}
+.section5 .packages .imagesection-1 .minisection:hover .upper-text{
+    transform: translateY(-30px);
+}
+.section5 .packages .imagesection-1 .minisection .overlay .bottom-text{
+    transform: rotateX(90deg);
+    transition: .5s all ease-in-out;
+}
+.section5 .packages .imagesection-1 .minisection:hover .bottom-text{
+    transform: rotateX(0deg);
+}
+.section5 .packages .imagesection-1 .minisection .overlay .bottom-text h2{
+    position: relative;
+    color: #ff1654;
+}
+.section5 .packages .imagesection-2 .mini-images {
+  position: relative;
+}
+.section5 .packages .imagesection-2 .mini-images .overlay{
+    position: absolute;
+    bottom: 50px;
+    left: 20px;
+    color: white;
+}
+.section5 .packages .imagesection-2 .mini-images .overlay .upper-text{
+    position: absolute;
+    top: 6px;
+    transition: .5s all ease-in-out;
+}
+.section5 .packages .imagesection-2 .mini-images:hover .upper-text{
+    transform: translateY(-30px);
+}
+.section5 .packages .imagesection-2 .mini-images .overlay .bottom-text h2{
+    color: #ff1654;
+}
+.section5 .packages .imagesection-2 .mini-images .overlay .bottom-text{
+    position: relative;
+    transform: rotateX(90deg);
+    transition: .5s all ease-in-out;
+}
+.section5 .packages .imagesection-2 .mini-images:hover .bottom-text{
+    transform: rotateY(0deg);
+}
+.section5 .packages .imagesection-2 {
+  flex: 1;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+.section5 .packages .imagesection-2 .mini-images a img {
+  width: 90%;
+  border-radius: 10px;
+  filter: brightness(70%);
+  transition: 0.4s all ease-in-out;
+}
+.section5 .packages .imagesection-2 .mini-images a img:hover {
+  transform: translateY(-5px);
+  filter: brightness(100%);
+}
+/*======== section 6=========*/
+.section6 {
+  position: relative;
+  background: url(s6image1.jpg);
+  height: 450px;
+  width: 100%;
+  background-size: cover;
+  z-index: 1;
+}
+.section6::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.463);
+  z-index: -1;
+}
+.section6 .text-details {
+  position: absolute;
+  width: 40%;
+  top: 25%;
+  left: 50%;
+}
+.section6 .text-details h2 {
+  color: white;
+  font-size: 40px;
+}
+.section6 .text-details p {
+  color: whitesmoke;
+  margin: 25px 0px;
+}
+.section6 .text-details button {
+  background-color: #ff1654;
+  height: 50px;
+  width: 150px;
+  border-radius: 10px;
+  color: white;
+  font: 17px;
+  border: 1px solid transparent;
+  margin-top: 20px;
+  transition: 0.5s all ease-in-out;
+}
+.section6 .text-details button:hover {
+  box-shadow: 0px 0px 0px 4px #ff16548c;
+}
+/*=========section 7==========*/
+
+.section7 .section7-margin {
+  margin: 0px 170px;
+}
+.section7 .section7-padding {
+  padding: 100px 0px;
+}
+.section7 .review-box {
+  text-align: center;
+  width: 60%;
+  margin-left: 20%;
+}
+.section7 .review-box h4 {
+  font-size: 18px;
+  color: #ff1654;
+  font-weight: 600;
+}
+.section7 .review-box h2 {
+  font-size: 45px;
+  font-weight: 600;
+  margin: 30px 0px;
+}
+.section7 .review-box .fa-quote-left {
+  font-size: 55px;
+  color: #ff1654;
+}
+.section7 .review-box p {
+  color: gray;
+  font-weight: 500;
+}
+.section7 .review-box img {
+  height: 90px;
+  width: 90px;
+  border-radius: 50%;
+  margin-top: 30px;
+  margin-bottom: 20px;
+}
+.section7 .review-box h6 {
+  font-size: 17px;
+  font-weight: 500;
+}
+/*======= section8=======*/
+.section8 {
+  background-color: whitesmoke;
+}
+.section8 .section8-margin {
+  margin: 0px 170px;
+}
+.section8 .section8-padding {
+  padding: 55px 0px;
+}
+.section8 .mini-section8 {
+  display: flex;
+  gap: 100px;
+}
+.section8 .mini-section8 .mini-1 {
+  flex: 1;
+}
+.section8 .mini-section8 .mini-1 h4 {
+  margin-bottom: 30px;
+  font-size: 20px;
+  font-weight: 600;
+}
+.section8 .mini-section8 .mini-1 ul li {
+  padding: 5px 0px;
+}
+.section8 .mini-section8 .mini-1 ul li a {
+  color: gray;
+}
+.section8 .mini-section8 .mini-1 ul li a:hover {
+  color: rgb(61, 61, 61);
+}
+.section8 .mini-section8 .mini-2 {
+  flex: 2.5;
+}
+.section8 .mini-section8 .mini-2 .mini2-mini {
+  background-color: white;
+  border-radius: 10px;
+}
+.section8 .mini-section8 .mini-2 .mini2-mini .email h3 {
+  font-weight: 600;
+}
+.section8 .mini-section8 .mini-2 .mini2-mini .email input {
+  margin: 20px 0px;
+  width: 100%;
+  height: 40px;
+  border: 1px solid transparent;
+  background-color: whitesmoke;
+  border-radius: 10px;
+}
+.section8 .mini-section8 .mini-2 .mini2-mini .email input::placeholder {
+  padding-left: 20px;
+  font-size: 17px;
+  font-weight: 600;
+}
+.section8 .mini-section8 .mini-2 .mini2-mini .email .email-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+.section8 .mini-section8 .mini-2 .mini2-mini .email .email-box a .go {
+  height: 40px;
+  width: 50px;
+  background-color: #ff1654;
+  color: white;
+  border: 1px solid transparent;
+  border-radius: 10px;
+  font-size: 17px;
+  font-weight: 500;
+  display: grid;
+  place-content: center;
+  text-align: center;
+}
+.section8 .mini-section8 .mini-2 .mini2-mini .email p {
+  color: gray;
+}
+.section8 .mini-section8 .mini-2 .mini2-mini .mini2-mini-padding {
+  padding: 30px;
+}
+.section8 .mini-section8 .mini-2 h4 {
+  margin-bottom: 30px;
+  font-size: 20px;
+  font-weight: 600;
+}
+.section8 .h-line {
+  height: 1px;
+  width: 100%;
+  margin: 40px 0px;
+  background-color: gray;
+}
+.section8 .section8-footer {
+  display: flex;
+  gap: 600px;
+}
+.section8 .section8-footer .icons {
+  display: flex;
+  gap: 20px;
+  font-size: 25px;
+}
+.section8 .section8-footer .icons div a {
+  transition: 0.3s all ease-in-out;
+}
+.section8 .section8-footer .icons div a:hover {
+  color: #ff1654;
+}
+/*========= media query=======*/
+@media (max-width: 576px) {
+  header .nav .buttons .fa-bars {
+    display: block;
+  }
+  header .nav .headname {
+    flex: 0.6;
+    font-size: 27px;
+    font-weight: 600;
+  }
+  header .nav .buttons a .touch {
+    display: none;
+  }
+  header .nav .navigation {
+    display: none;
+  }
+  .section1 .heading-box .buttons {
+    display: grid;
+  }
+  header .margin {
+    margin: 0px 10px;
+  }
+  .heading-box .main-heading {
+    padding-top: 90px;
+    font-size: 25px;
+    color: white;
+    font-weight: 600;
+  }
+  .heading-box .mini-heading {
+    font-size: 17.5px;
+    color: white;
+    margin: 12px 0px;
+  }
+  .heading-box {
+    height: auto;
+    width: 60%;
+    position: absolute;
+    margin: 0px 20px;
+    top: 155px;
+  }
+  .section1 .heading-box .buttons .drop-list select {
+    height: 50px;
+    width: 100%;
+    border-radius: 7px;
+    color: grey;
+    font-size: 17px;
+    padding: 0px 10px;
+  }
+  .section1 .heading-box .buttons .date-brith input {
+    height: 50px;
+    width: 100%;
+    border: 1px solid transparent;
+    border-radius: 7px;
+    color: grey;
+    font-size: 17px;
+    padding: 0px 10px;
+  }
+  .section1 .heading-box .buttons .search-button a {
+    height: 50px;
+    width: 100%;
+  }
+  /*======section 2=========*/
+  .section2 .section2-margin {
+    margin: 0px 10px;
+  }
+  .section2 .h-2 {
+    font-size: 30px;
+    font-weight: 600;
+  }
+  /*========section 3===========*/
+  .section3 .grid {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 25px;
+  }
+  .section3 .grid .mini-box .image-content {
+    display: grid;
+    gap: 30px;
+    align-items: center;
+  }
+  .section3 .section3-margin {
+    margin: 0px 10px;
+  }
+  .section3 .grid .mini-box .image-content .content .price .text {
+    display: flex;
+    gap: 140px;
+  }
+  /*==========section 4=============*/
+  .section4 .section4-margin {
+    margin: 0px 10px;
+  }
+  .section4 .section4-padding {
+    padding: 40px 0px;
+  }
+  .section4 .ranking-box {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 100px;
+  }
+  .section4 .ranking-box .r-box1 .digit {
+    font-size: 30px;
+    font-weight: 600;
+    color: #ff1654;
+  }
+  /*==========section 5=========*/
+  .section5 .packages {
+    display: grid;
+    gap: 10px;
+  }
+  .section5 .packages .imagesection-2 {
+    flex: 1;
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .section5 .section5-margin {
+    margin: 0px 10px;
+  }
+  .section5 .section5-padding {
+    padding: 50px 0px;
+  }
+  /*=========section 6========*/
+  .section6 .text-details {
+    width: 65%;
+    top: 25%;
+    left: 15%;
+  }
+  .section6 .text-details h2 {
+    color: white;
+    font-size: 20px;
+  }
+  /*========section 7========*/
+  .section7 .section7-margin {
+    margin: 0px 10px;
+  }
+  .section7 .section7-padding {
+    padding: 20px 0px;
+  }
+  .section7 .review-box h4 {
+    font-size: 16px;
+  }
+  .section7 .review-box h2 {
+    font-size: 30px;
+  }
+  .section7 .review-box .fa-quote-left {
+    font-size: 45px;
+  }
+  .section7 .review-box p {
+    font-size: 12px;
+  }
+  .section7 .review-box img {
+    height: 70px;
+    width: 70px;
+  }
+  /*======= section 8=======*/
+  .section8 .section8-margin {
+    margin: 0px 10px;
+  }
+  .section8 .mini-section8 {
+    display: grid;
+    gap: 10px;
+  }
+  .section8 .section8-footer {
+    display: grid;
+    gap: 20px;
+  }
+  .section8 .section8-footer .icons {
+    font-size: 20px;
+  }
+  .section8 .section8-footer .footer1 {
+    font-size: 13px;
+    display: flex;
+    gap: 5px;
+  }
+}
+@media (min-width: 576px) {
+  header .nav .buttons .fa-bars {
+    display: block;
+  }
+  header .nav .headname {
+    flex: 0.6;
+    font-size: 27px;
+    font-weight: 600;
+  }
+  header .nav .buttons a .touch {
+    height: 30px;
+    width: 120px;
+  }
+  header .nav .navigation {
+    display: none;
+  }
+  .section1 .heading-box .buttons {
+    display: grid;
+  }
+  header .margin {
+    margin: 0px 10px;
+  }
+  .heading-box .main-heading {
+    padding-top: 90px;
+    font-size: 25px;
+    color: white;
+    font-weight: 600;
+  }
+  .heading-box .mini-heading {
+    font-size: 17.5px;
+    color: white;
+    margin: 12px 0px;
+  }
+  .heading-box {
+    height: auto;
+    width: 60%;
+    position: absolute;
+    margin: 0px 20px;
+    top: 155px;
+  }
+  .section1 .heading-box .buttons .drop-list select {
+    height: 50px;
+    width: 380px;
+    border-radius: 7px;
+    color: grey;
+    font-size: 17px;
+    padding: 0px 10px;
+  }
+  .section1 .heading-box .buttons .date-brith input {
+    height: 50px;
+    width: 380px;
+    border: 1px solid transparent;
+    border-radius: 7px;
+    color: grey;
+    font-size: 17px;
+    padding: 0px 10px;
+  }
+  .section1 .heading-box .buttons .search-button a {
+    height: 50px;
+    width: 380px;
+  }
+  /*======section 2=========*/
+  .section2 .section2-margin {
+    margin: 0px 10px;
+  }
+  .section2 .h-2 {
+    font-size: 30px;
+    font-weight: 600;
+  }
+  /*========section 3===========*/
+  .section3 .grid {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 25px;
+  }
+  .section3 .grid .mini-box .image-content {
+    display: flex;
+    gap: 30px;
+    align-items: center;
+  }
+  .section3 .section3-margin {
+    margin: 0px 10px;
+  }
+  /*==========section 4=============*/
+  .section4 .section4-margin {
+    margin: 0px 10px;
+  }
+  .section4 .section4-padding {
+    padding: 40px 0px;
+  }
+  .section4 .ranking-box {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 100px;
+  }
+  .section4 .ranking-box .r-box1 .digit {
+    font-size: 30px;
+    font-weight: 600;
+    color: #ff1654;
+  }
+  /*==========section 5=========*/
+  .section5 .packages {
+    display: grid;
+    gap: 10px;
+  }
+  .section5 .packages .imagesection-2 {
+    flex: 1;
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .section5 .section5-margin {
+    margin: 0px 10px;
+  }
+  .section5 .section5-padding {
+    padding: 50px 0px;
+  }
+  /*=========section 6========*/
+  .section6 .text-details {
+    width: 65%;
+    top: 25%;
+    left: 15%;
+  }
+  .section6 .text-details h2 {
+    color: white;
+    font-size: 20px;
+  }
+  /*========section 7========*/
+  .section7 .section7-margin {
+    margin: 0px 20px;
+  }
+  .section7 .section7-padding {
+    padding: 10px 0px;
+  }
+  .section7 .review-box h4 {
+    font-size: 16px;
+  }
+  .section7 .review-box h2 {
+    font-size: 30px;
+  }
+  .section7 .review-box .fa-quote-left {
+    font-size: 45px;
+  }
+  .section7 .review-box p {
+    font-size: 12px;
+  }
+  .section7 .review-box img {
+    height: 70px;
+    width: 70px;
+  }
+  /*======= section 8=======*/
+  .section8 .section8-margin {
+    margin: 0px 10px;
+  }
+  .section8 .mini-section8 {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+  }
+  .section8 .section8-footer {
+    display: grid;
+    gap: 20px;
+  }
+  .section8 .section8-footer .icons {
+    font-size: 23px;
+  }
+  .section8 .section8-footer .footer1 {
+    font-size: 13px;
+    display: flex;
+    gap: 5px;
+  }
+}
+@media (min-width: 768px) {
+  header .margin {
+    margin: 0px 100px;
+  }
+  .heading-box {
+    height: auto;
+    width: 60%;
+    position: absolute;
+    margin: 0px 100px;
+    top: 100px;
+  }
+  header .nav .headname {
+    flex: 0.6;
+    font-size: 35px;
+    font-weight: 600;
+  }
+  header .nav .buttons a .touch {
+    height: 40px;
+    width: 160px;
+  }
+  /*======section 2=========*/
+  .section2 .section2-margin {
+    margin: 0px 100px;
+  }
+  .section2 .h-2 {
+    font-size: 30px;
+    font-weight: 600;
+  }
+  /*========section 3===========*/
+  .section3 .grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+  }
+  .section3 .grid .mini-box .image-content {
+    display: grid;
+    gap: 30px;
+    align-items: center;
+  }
+  .section3 .section3-margin {
+    margin: 0px 100px;
+  }
+  /*==========section 4=============*/
+  .section4 .section4-margin {
+    margin: 0px 100px;
+  }
+  .section4 .section4-padding {
+    padding: 40px 0px;
+  }
+  .section4 .ranking-box .r-box1 .digit {
+    font-size: 40px;
+    font-weight: 600;
+    color: #ff1654;
+  }
+  .section5 .section5-margin {
+    margin: 0px 100px;
+  }
+  .section5 .section5-padding {
+    padding: 50px 0px;
+  }
+  /*======section 5 inherite from min 576px======*/
+  /*=========section 6========*/
+  .section6 .text-details {
+    width: 40%;
+    top: 25%;
+    left: 50%;
+  }
+  .section6 .text-details h2 {
+    color: white;
+    font-size: 30px;
+  }
+  /*========section 7========*/
+  .section7 .section7-margin {
+    margin: 0px 100px;
+  }
+  .section7 .section7-padding {
+    padding: 80px 0px;
+  }
+  .section7 .review-box h4 {
+    font-size: 19px;
+  }
+  .section7 .review-box h2 {
+    font-size: 35px;
+  }
+  .section7 .review-box .fa-quote-left {
+    font-size: 50px;
+  }
+  .section7 .review-box p {
+    font-size: 15px;
+  }
+  .section7 .review-box img {
+    height: 80px;
+    width: 80px;
+  }
+  /*======= section 8=======*/
+  .section8 .section8-margin {
+    margin: 0px 100px;
+  }
+  .section8 .mini-section8 {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+  }
+  .section8 .section8-footer {
+    display: flex;
+    gap: 170px;
+  }
+  .section8 .section8-footer .icons {
+    font-size: 25px;
+  }
+  .section8 .section8-footer .footer1 {
+    font-size: 13px;
+    display: flex;
+    gap: 5px;
+  }
+}
+@media (min-width: 992px) {
+  header .margin {
+    margin: 0px 100px;
+  }
+  .heading-box {
+    height: auto;
+    width: 60%;
+    position: absolute;
+    margin: 0px 100px;
+    top: 100px;
+  }
+  header .nav .headname {
+    flex: 0.6;
+    font-size: 30px;
+    font-weight: 600;
+  }
+  header .nav .buttons a .touch {
+    height: 30px;
+    width: 115px;
+  }
+  .heading-box .main-heading {
+    padding-top: 90px;
+    font-size: 50px;
+    color: white;
+    font-weight: 600;
+  }
+  .heading-box .mini-heading {
+    font-size: 17.5px;
+    color: white;
+    margin: 12px 0px;
+  }
+  header .nav .buttons .fa-bars {
+    display: none;
+  }
+  header .nav .navigation {
+    display: block;
+  }
+  header .nav .navigation ul {
+    justify-content: end;
+    gap: 15px;
+  }
+  .section1 .heading-box .buttons {
+    display: flex;
+  }
+  .section1 .heading-box .buttons .drop-list select {
+    height: 50px;
+    width: 185px;
+    border-radius: 7px;
+    color: grey;
+    font-size: 17px;
+    padding: 0px 10px;
+  }
+  header .nav .navigation .showlist:hover .droplist {
+    left: 600px;
+  }
+  .section1 .heading-box .buttons .date-brith input {
+    height: 50px;
+    width: 185px;
+    border: 1px solid transparent;
+    border-radius: 7px;
+    color: grey;
+    font-size: 17px;
+    padding: 0px 10px;
+  }
+  .section1 .heading-box .buttons .search-button a {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    width: 150px;
+    border-radius: 7px;
+    color: white;
+    font-size: 17px;
+    border: 1px solid transparent;
+    background-color: #ff1654;
+    transition: 0.5s all ease-in-out;
+  }
+  /*======section 2=========*/
+  .section2 .section2-margin {
+    margin: 0px 100px;
+  }
+  .section2 .h-2 {
+    font-size: 30px;
+    font-weight: 600;
+  }
+  /*========section 3===========*/
+  .section3 .grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+  }
+  .section3 .grid .mini-box .image-content {
+    display: grid;
+    gap: 30px;
+    align-items: center;
+  }
+  .section3 .section3-margin {
+    margin: 0px 100px;
+  }
+
+  /*==========section 4=============*/
+  .section4 .ranking-box .r-box1 .digit {
+    font-size: 40px;
+  }
+  /*==========section 5=======*/
+  .section5 .packages {
+    display: flex;
+    gap: 20px;
+  }
+  /*=========section 6========*/
+  .section6 .text-details {
+    width: 40%;
+    top: 25%;
+    left: 50%;
+  }
+  .section6 .text-details h2 {
+    color: white;
+    font-size: 35px;
+  }
+  /*========section 7========*/
+  .section7 .section7-margin {
+    margin: 0px 170px;
+  }
+  .section7 .section7-padding {
+    padding: 100px 0px;
+  }
+  .section7 .review-box h4 {
+    font-size: 18px;
+  }
+  .section7 .review-box h2 {
+    font-size: 45px;
+  }
+  .section7 .review-box .fa-quote-left {
+    font-size: 55px;
+  }
+  .section7 .review-box p {
+    font-size: 15px;
+  }
+  .section7 .review-box img {
+    height: 90px;
+    width: 90px;
+  }
+  /*======= section 8=======*/
+  .section8 .section8-margin {
+    margin: 0px 100px;
+  }
+  .section8 .mini-section8 {
+    display: flex;
+    gap: 25px;
+  }
+  .section8 .section8-footer {
+    display: flex;
+    gap: 170px;
+  }
+  .section8 .section8-footer .icons {
+    font-size: 25px;
+  }
+  .section8 .section8-footer .footer1 {
+    font-size: 13px;
+    display: flex;
+    gap: 5px;
+  }
+}
+@media (min-width: 1200px) {
+  header .margin {
+    margin: 0px 170px;
+  }
+  .heading-box {
+    height: auto;
+    width: 60%;
+    position: absolute;
+    margin: 0px 170px;
+    top: 100px;
+  }
+  header .nav .headname {
+    flex: 0.6;
+    font-size: 35px;
+    font-weight: 600;
+  }
+  header .nav .buttons a .touch {
+    height: 50px;
+    width: 160px;
+  }
+  .heading-box .main-heading {
+    padding-top: 90px;
+    font-size: 50px;
+    color: white;
+    font-weight: 600;
+  }
+  .heading-box .mini-heading {
+    font-size: 17.5px;
+    color: white;
+    margin: 22px 0px;
+  }
+  header .nav .buttons .fa-bars {
+    display: none;
+  }
+  header .nav .navigation {
+    display: block;
+  }
+  header .nav .navigation ul {
+    justify-content: left;
+    gap: 20px;
+  }
+  .section1 .heading-box .buttons {
+    display: flex;
+  }
+  .section1 .heading-box .buttons .drop-list select {
+    height: 50px;
+    width: 185px;
+    border-radius: 7px;
+    color: grey;
+    font-size: 17px;
+    padding: 0px 10px;
+  }
+  .section1 .heading-box .buttons .date-brith input {
+    height: 50px;
+    width: 185px;
+    border: 1px solid transparent;
+    border-radius: 7px;
+    color: grey;
+    font-size: 17px;
+    padding: 0px 10px;
+  }
+  header .nav .navigation .showlist:hover .droplist {
+    left: 630px;
+  }
+  .section1 .heading-box .buttons .search-button a {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    width: 150px;
+    border-radius: 7px;
+    color: white;
+    font-size: 17px;
+    border: 1px solid transparent;
+    background-color: #ff1654;
+    transition: 0.5s all ease-in-out;
+  }
+  /*======section 2=========*/
+  .section2 .section2-margin {
+    margin: 0px 170px;
+  }
+  .section2 .h-2 {
+    font-size: 40px;
+    font-weight: 600;
+  }
+  /*========section 3===========*/
+  .section3 .grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+  }
+  .section3 .grid .mini-box .image-content {
+    display: flex;
+    gap: 30px;
+    align-items: center;
+  }
+  .section3 .section3-margin {
+    margin: 0px 170px;
+  }
+  /*==========section 4=============*/
+  .section4 .section4-margin {
+    margin: 0px 170px;
+  }
+  .section4 .section4-padding {
+    padding: 30px 0px;
+  }
+  .section4 .ranking-box {
+    display: flex;
+    gap: 200px;
+  }
+  .section4 .ranking-box .r-box1 .digit {
+    font-size: 50px;
+    font-weight: 600;
+    color: #ff1654;
+  }
+  /*======== section 5========*/
+  .section5 .section5-margin {
+    margin: 0px 170px;
+  }
+  .section5 .section5-padding {
+    padding: 90px 0px;
+  }
+  .section5 .packages {
+    display: flex;
+    gap: 30px;
+  }
+  /*=========section 6========*/
+  .section6 .text-details {
+    width: 40%;
+    top: 25%;
+    left: 50%;
+  }
+  .section6 .text-details h2 {
+    color: white;
+    font-size: 40px;
+  }
+  /*======section 7 inherite from min-992px ======*/
+  /*======= section 8=======*/
+  .section8 .section8-margin {
+    margin: 0px 170px;
+  }
+  .section8 .section8-footer {
+    display: flex;
+    gap: 600px;
+  }
+}
